@@ -31,6 +31,10 @@ body {
     color: #ff3;
 }
 
+#cY::after {
+    color: #995;
+}
+
 #cC {
     color: #3ff;
 }
