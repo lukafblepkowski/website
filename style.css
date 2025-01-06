@@ -1,0 +1,79 @@
+body {
+    background-color: #000;
+    font-family: "Courier";
+    font-size: 20px;
+    color: #FFF;
+    margin: 5;
+    padding: 5;
+}
+
+#bg {
+    color: #333;
+}
+
+#cR {
+    color: #f33;
+}
+
+#cG {
+    color: #3f3;
+}
+
+#cB {
+    color: #33f;
+}
+
+#cBD {
+    color: #339;
+}
+
+#cY {
+    color: #ff3;
+}
+
+#cC {
+    color: #3ff;
+}
+
+#cCW {
+    color: #79f;
+}
+
+#cM {
+    color: #f3f;
+}
+
+#cMD {
+    color: #939;
+}
+
+#cDesc {
+    color: #ddd;
+    word-wrap: break-word;
+    height: 88px;
+    width: 750px;
+    padding: 0;
+    margin: 0;
+}
+
+#item {
+    border: 2px solid #333;
+    display:inline-block;
+    align-items: top;
+    padding: 5px;
+    margin: 5px;
+    width: 1000px;
+}
+
+#icon {
+    width: 230px;
+    vertical-align: top;
+}
+
+#inline {
+    display: inline-block;
+}
+
+#footer {
+    vertical-align: bottom;
+}
