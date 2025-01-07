@@ -14,7 +14,14 @@
         $file = fopen('items.csv', 'r');
 
         if($file !== false) {
+            $skippedfirst = false;
+
             while(($data = fgetcsv($file)) !== false) {
+                if(!$skippedfirst) {
+                    $skippedfirst = true;
+                    continue;
+                }
+
                 $title = $data[0];
                 $img_addr = $data[1];
                 $release = $data[2];
