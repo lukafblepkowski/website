@@ -21,17 +21,14 @@
                 $tag = $data[3];
                 $desc = $data[4];
                 $rawhtml_source = $data[5];
-<<<<<<< HEAD
                 $source_id = $data[6];
                 $source = $data[7];
                 $rawhtml_download = $data[8];
                 $download_desc = $data[9];
                 $download = $data[10];
-=======
                 $source = $data[6];
                 $rawhtml_download = $data[7];
                 $download = $data[8];
->>>>>>> 62ac37de18e3fff7014cfe230b65a7e385d322db
 
                 echo "
                 <div id='item'>
@@ -41,13 +38,10 @@
                         <i id='cMD'>",$tag,"</i><br/><br/>
                         <p id='cDesc'>",$desc,"</p><br/>
                         <div id='footer'>
-<<<<<<< HEAD
                             <span id='cC'>Source code: </span><a id=",$source_id," href=",$rawhtml_source,">",$source,"</a><br/>
                             <span id='cCW'>",$download_desc,": </span><a id=cY href=",$rawhtml_download,">",$download,"</a>
-=======
                             <span id='cC'>Source code: </span><a id=cY href=",$rawhtml_source,">",$source,"</a><br/>
                             <span id='cCW'>Info / Download page: </span><a id=cY href=",$rawhtml_download,">",$download,"</a>
->>>>>>> 62ac37de18e3fff7014cfe230b65a7e385d322db
                         </div>
                     </div>
                 </div>
