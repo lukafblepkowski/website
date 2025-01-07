@@ -26,9 +26,6 @@
                 $rawhtml_download = $data[8];
                 $download_desc = $data[9];
                 $download = $data[10];
-                $source = $data[6];
-                $rawhtml_download = $data[7];
-                $download = $data[8];
 
                 echo "
                 <div id='item'>
@@ -40,8 +37,6 @@
                         <div id='footer'>
                             <span id='cC'>Source code: </span><a id=",$source_id," href=",$rawhtml_source,">",$source,"</a><br/>
                             <span id='cCW'>",$download_desc,": </span><a id=cY href=",$rawhtml_download,">",$download,"</a>
-                            <span id='cC'>Source code: </span><a id=cY href=",$rawhtml_source,">",$source,"</a><br/>
-                            <span id='cCW'>Info / Download page: </span><a id=cY href=",$rawhtml_download,">",$download,"</a>
                         </div>
                     </div>
                 </div>
