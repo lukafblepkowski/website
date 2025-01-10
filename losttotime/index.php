@@ -175,15 +175,6 @@
     </head> 
     <body>
         <p id="terminal"><?php
-            $file = fopen('items.csv', 'r');
-            $items = [];
-
-            if($file !== false) {
-                while(($data = fgetcsv($file)) !== false) {
-                    array_push($items, $data);
-                }
-            }
-            
             color("cB");
             $XY = inscribeString("Welcome to spunky2.com ", 0, $LEN, [$LEN/2-36, 0]);
 
@@ -197,92 +188,34 @@
             color("cG");
             color(-2, "", -3);
             color(-6, "", -7);
-            $XY = inscribeString("Things I've made", 0, $LEN, $XY);
-            //Generate grid and color point
-            $csize = floor($LEN / $COLUMNS);
-            $cheights = array_fill(0, $COLUMNS, 4);
+            $XY = inscribeString("Things I've lost", 0, $LEN, $XY);
             
-            for($i = 0; $i < sizeof($items); $i += 1) {
-                $c = $i % $COLUMNS;
-                
-                $x1 = $csize * $c + ceil(0.5*($LEN % $COLUMNS));
-                $x2 = $csize * ($c + 1) - 2 + ceil(0.5*($LEN % $COLUMNS));
-                $y = $cheights[$c];
-                color("bg");
-                fillLRPartial($x1, $x2, $y, "@");
-                $cheights[$c] += 1;
-                
-                $XY = [$x1 + 1, $y + 1];
+            $XY[0] = $LEN/2-20;
+            $XY[1] += 2;
 
-                //Title
-                color("cG");
-                color(-8, "", -9);
-                $XY = inscribeString($items[$i][0], $x1 + 1, $x2 - 1, $XY);
-                
-                $XY[0] += 1;
+            color("cDesc");
+            $XY = inscribeString(
+                "So, my C drive failed. This happened when I was but a wee teen (like, one year ago as of writing). This means some of the source code of my games is lost to time. But at least, the games are on itch.io.",
+                $LEN/2-20, $LEN/2+20, $XY
+            );
 
-                //Release Date
-                color(-2, "", -3);
-                color("cBD");
-                $XY = inscribeString("(Released ".$items[$i][2].")", $x1 + 1, $x2 - 1, $XY);
+            $XY[0] = $LEN/2-20;
+            $XY[1] += 2;
 
-                $XY[0] = $x1 + 1;
-                $XY[1] += 1;
+            color("cDesc");
+            $XY = inscribeString(
+                ":(",
+                $LEN/2-20, $LEN/2+20, $XY
+            );
 
-                //Tag
-                color("cMD");
-                color(-2, "", -3);
-                $XY = inscribeString($items[$i][3], $x1 + 1, $x2 - 1, $XY);
+            $XY[0] = $LEN/2-11;
+            $XY[1] += 2;
 
-                $XY[0] = $x1 + 1;
-                $XY[1] += 2;
-
-                //Description
-                color("cDesc");
-                $XY = inscribeString($items[$i][4], $x1 + 1, $x2 - 1, $XY);
-
-                $XY[0] = $x1 + 1;
-                $XY[1] += 2;
-
-                //Source code
-                color("cC");
-                $XY = inscribeString("Source code:", $x1 + 1, $x2 - 1, $XY);
-
-                $XY[0] += 1;
-
-                color(-4, [$items[$i][6], $items[$i][5]], -5);
-                $XY = inscribeString($items[$i][7], $x1 + 1, $x2 - 1, $XY);
-                
-                $XY[0] = $x1 + 1;
-                $XY[1] += 1;
-            
-                //Other link
-                color("cCW");
-                $XY = inscribeString($items[$i][9].":", $x1 + 1, $x2 - 1, $XY);
-                
-                $XY[0] += 1;
-
-                color(-4, ["cY", $items[$i][8]], -5);
-                $XY = inscribeString($items[$i][10], $x1 + 1, $x2 - 1, $XY);
-
-                $XY[0] = $x1 + 1;
-                $XY[1] += 1;
-                
-                //Bottom border
-                color("bg");
-                fillLRPartial($x1, $x2, $XY[1], "@");
-
-                //Left border
-                color("bg");
-                fillUDPartial($x1, $y, $XY[1], "@");
-
-                //Right border
-                color("bg");
-                fillUDPartial($x2, $y, $XY[1], "@");
-
-
-                $cheights[$c] += ($XY[1] - ($y + 1)) + 2;
-            }
+            color(-4, ["cY", "../"], -5);
+            $XY = inscribeString(
+                "Back to homepage",
+                $LEN/2-21, $LEN/2+19, $XY
+            );
 
             //Process grid and colorpoint
             for($y = 0; $y < sizeof($grid); $y += 1) {
@@ -307,11 +240,8 @@
 
                 echo "<br>";
             }
-            
-            ?>
-        </p>
 
-        
-    
+            ?>
+        </p>    
     </body>
 </html>
