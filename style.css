@@ -18,7 +18,7 @@ body {
 }
 
 #cB {
-    color: #33f;
+    color: #66f;
 }
 
 #cBD {
@@ -49,6 +49,10 @@ body {
     color: #939;
 }
 
+#cDesc {
+    color: #ddd;
+}
+
 #item {
     border: 2px solid #333;
     display: inline-block;
@@ -69,6 +73,6 @@ body {
 
 #terminal {
 width: 166ch;
-white-space: nowrap;
+white-space: pre;
 overflow: hidden;
 }
