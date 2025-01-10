@@ -1,0 +1,80 @@
+body {
+    background-color: #000;
+    font-family: "Courier New";
+    font-size:1vw;
+    color: #FFF;
+    padding: 0px;
+    margin: 0px;
+}
+
+#bg {
+    color: #222;
+}
+
+#cR {
+    color: #f33;
+}
+
+#cG {
+    color: #3f3;
+}
+
+#cB {
+    color: #33f;
+}
+
+#cBD {
+    color: #22c;
+}
+
+#cY {
+    color: #ff3;
+}
+
+#cY::after {
+    color: #995;
+}
+
+#cC {
+    color: #3ff;
+}
+
+#cCW {
+    color: #79f;
+}
+
+#cM {
+    color: #f3f;
+}
+
+#cMD {
+    color: #939;
+}
+
+#cDesc {
+    color: #ddd;
+}
+
+#item {
+    border: 2px solid #333;
+    display: inline-block;
+    align-items: top;
+    padding: 0.125%;
+    margin: 0.125%;
+    width: 23%;
+    height: 10%
+}
+
+#footer {
+    vertical-align: bottom;
+}
+
+#lostToTime {
+    color: #f33;
+}
+
+#terminal {
+width: 166ch;
+white-space: pre;
+overflow: hidden;
+}
