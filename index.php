@@ -172,6 +172,8 @@
     <head>
         <title>spunky2</title>
         <link rel='stylesheet' href='style.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
     </head> 
     <body>
         <p id="terminal"><?php
@@ -185,13 +187,13 @@
             }
             
             color("cB");
-            $XY = inscribeString("Welcome to spunky2.com ", 0, $LEN, [$LEN/2-36, 0]);
+            $XY = inscribeString("Welcome to spunky2.com ", 0, $LEN, [floor($LEN/2)-36, 0]);
 
             color("cM");
             color(-2, "", -3);
             $XY = inscribeString("(Luka FB Lepkowski's personal repo / website)", 0, $LEN,$XY);
 
-            $XY[0] = $LEN/2-11;
+            $XY[0] = floor($LEN/2)-11;
             $XY[1] += 2;
 
             color("cG");
